@@ -7,4 +7,8 @@ export class MyCustomPluginWeb extends WebPlugin implements MyCustomPluginPlugin
     console.log('ECHO', options);
     return options;
   }
+  async TestPlugin(options: { value: string }): Promise<{ value: string }> {
+    alert(options.value);
+    return options;
+  }
 }
